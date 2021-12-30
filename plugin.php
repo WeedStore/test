@@ -1137,45 +1137,8 @@ class acymPlugin extends acymObject
 
     protected function callApiSendingMethod($url, $data = [], $headers = [], $type = 'GET', $authentication = [], $dataDecoded = false)
     {
-		return ['message' => 'OK', 'id' => uniqid() ];
-        /*$curl = curl_init();
-
-        $optionsArray = [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => $type,
-            CURLOPT_HTTPHEADER => $headers,
-        ];
-
-        if (empty($dataDecoded) || $dataDecoded === false) {
-            $optionsArray[CURLOPT_POSTFIELDS] = json_encode($data);
-        } elseif ($dataDecoded === true) {
-            $optionsArray[CURLOPT_POSTFIELDS] = $data;
-        }
-
-        if (!empty($authentication)) {
-            $optionsArray[CURLOPT_USERPWD] = $authentication['name'].':'.$authentication['pwd'];
-        }
-
-        curl_setopt_array(
-            $curl,
-            $optionsArray
-        );
-
-        $response = curl_exec($curl);
-        $error = curl_error($curl);
-
-        curl_close($curl);
-
-        if ($error) {
-            return ['error_curl' => $error];
-        } else {
-            return json_decode($response, true);
-        }*/
+	return ['message' => 'OK', 'id' => uniqid() ];
+        
     }
 
     protected function getTestCredentialsSendingMethodButton($sendingMethodId)
