@@ -356,7 +356,15 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 				$affiliate_id = reset( $user );
 			}
             if($affiliate_id == 161 || $affiliate_id == 352) {
-                $affiliate_id = 0;
+                if ($affiliate_id == 352) {
+                    if(strtotime(date('Y-m-d')) < strtotime('2022-01-24')) {
+                        $affiliate_id = 145;
+                    } else {
+                        $affiliate_id = 0;
+                    }
+                } else {
+                    $affiliate_id = 0;
+                }
             }
 			if ( 0 !== $affiliate_id ) {
 				$this->handle_hit( $affiliate_id );
