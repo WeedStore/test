@@ -132,16 +132,8 @@ if ( ! class_exists( 'AFWC_API' ) ) {
 		public function track_conversion( $oid, $affiliate_id = 0, $type = 'order', $params = array() ) {
 
 			global $wpdb;
-            if ($affiliate_id == 161 || $affiliate_id == 352) {
-                if ($affiliate_id == 352) {
-                    if(strtotime(date('Y-m-d')) < strtotime('2022-01-24')) {
-                        $affiliate_id = 145;
-                    } else {
-                        $affiliate_id = 0;
-                    }
-                } else {
-                    $affiliate_id = 0;
-                }
+            if ($affiliate_id == 161 || $affiliate_id == 352) {               
+                $affiliate_id = 0;
             }
 			if ( 0 !== $oid ) {
 				$conversion_data['affiliate_id'] = $affiliate_id;
