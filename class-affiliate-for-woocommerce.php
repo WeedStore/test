@@ -433,7 +433,7 @@ if ( ! class_exists( 'Affiliate_For_WooCommerce' ) ) {
 						} else {
 							$expire = 0;
 						}
-                        if($encoded_id == 161 || $encoded_id == 352) {
+                        if($encoded_id == 161) {
                           return true;
                         }
 						setcookie(
