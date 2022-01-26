@@ -132,7 +132,7 @@ if ( ! class_exists( 'AFWC_API' ) ) {
 		public function track_conversion( $oid, $affiliate_id = 0, $type = 'order', $params = array() ) {
 
 			global $wpdb;
-            if ($affiliate_id == 161 || $affiliate_id == 352) {               
+            if ($affiliate_id == 161 ) {               
                 $affiliate_id = 0;
             }
 			if ( 0 !== $oid ) {
